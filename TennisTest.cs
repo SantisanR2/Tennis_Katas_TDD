@@ -35,7 +35,7 @@ public class TennisTest
     }
 
     [Fact]
-    public void test()
+    public void Debe_Dar_Deuce_Si_Ambos_3Puntos_E_Iguales()
     {
         //Arrange
         var scorePlayer1 = 4;
