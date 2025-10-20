@@ -57,6 +57,8 @@ public class TennisTest
                 true => "Player2 wins the game",
                 false => "Player1 wins the game"
             };
+        if (scorePlayer1 == 4 && scorePlayer2 == 4)
+            return "deuce";
         
         result += scorePlayer1 switch
         {
