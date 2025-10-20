@@ -72,7 +72,7 @@ public class TennisTest
                 true => "Player2 wins the game",
                 false => "Player1 wins the game"
             };
-        if (scorePlayer1 == 4 && scorePlayer2 == 4)
+        if (scorePlayer1 == scorePlayer2)
             return "deuce";
         if (scorePlayer1 == 4 && scorePlayer2 == 5)
             return "advantage for Player2";
