@@ -49,7 +49,7 @@ public class TennisTest
     }
 
     [Fact]
-    public void test()
+    public void Debe_Describir_Bien_Ventaja_Si_Ambos_3_Y_1Punto_Arriba()
     {
         //Arrange
         var scorePlayer1 = 4;
