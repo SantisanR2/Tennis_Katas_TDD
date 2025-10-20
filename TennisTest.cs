@@ -4,18 +4,19 @@ namespace Tennis;
 
 public class TennisTest
 {
-    [Fact]
-    public void Debe_Ganar_Si_4Puntos_Y_2_Arriba()
+    [Theory]
+    [InlineData(0, 4, "Player2 wins the game")]
+    [InlineData(2, 4, "Player2 wins the game")]
+    [InlineData(6, 4, "Player1 wins the game")]
+    public void Debe_Ganar_Si_4Puntos_Y_2_Arriba(int scorePlayer1, int  scorePlayer2, string expected)
     {
         //Arrange
-        var scorePlayer1 = 0;
-        var scorePlayer2 = 4;
 
         //Act
         var score = Get_Score(scorePlayer1, scorePlayer2);
         
         //Assert
-        score.Should().Be("Player2 wins the game");
+        score.Should().Be(expected);
     }
 
     [Fact]
