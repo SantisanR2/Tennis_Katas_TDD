@@ -34,6 +34,8 @@ public class TennisTest
 
     private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
+        if (scorePlayer2 == 2)
+            return "love-thirty";
         return "Player2 wins the game";
     }
 }
