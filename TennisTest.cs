@@ -34,12 +34,13 @@ public class TennisTest
         score.Should().Be(expected);
     }
 
-    [Fact]
-    public void Debe_Dar_Deuce_Si_Ambos_3Puntos_E_Iguales()
+    [Theory]
+    [InlineData(4, 4)]
+    [InlineData(5, 5)]
+    [InlineData(7, 7)]
+    public void Debe_Dar_Deuce_Si_Ambos_3Puntos_E_Iguales(int scorePlayer1, int  scorePlayer2)
     {
         //Arrange
-        var scorePlayer1 = 4;
-        var scorePlayer2 = 4;
 
         //Act
         var score = Get_Score(scorePlayer1, scorePlayer2);
