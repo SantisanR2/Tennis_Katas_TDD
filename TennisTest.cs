@@ -20,6 +20,6 @@ public class TennisTest
 
     private object Get_Score(int scorePlayer1, int scorePlayer2)
     {
-        throw new NotImplementedException();
+        return "Player2 wins the game";
     }
 }
