@@ -5,7 +5,7 @@ namespace Tennis;
 public class TennisTest
 {
     [Fact]
-    public void Test1()
+    public void Debe_Ganar_Si_4Puntos_Y_2_Arriba()
     {
         //Arrange
         var scorePlayer1 = 0;
@@ -18,7 +18,7 @@ public class TennisTest
         score.Should().Be("Player2 wins the game");
     }
 
-    private object Get_Score(int scorePlayer1, int scorePlayer2)
+    private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
         return "Player2 wins the game";
     }
