@@ -73,6 +73,8 @@ public class TennisTest
             };
         if (scorePlayer1 == 4 && scorePlayer2 == 4)
             return "deuce";
+        if (scorePlayer1 == 4 && scorePlayer2 == 5)
+            return "advantage for Player2";
         
         result += scorePlayer1 switch
         {
