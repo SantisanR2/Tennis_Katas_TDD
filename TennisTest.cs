@@ -18,6 +18,20 @@ public class TennisTest
         score.Should().Be("Player2 wins the game");
     }
 
+    [Fact]
+    public void test()
+    {
+        //Arrange
+        var scorePlayer1 = 0;
+        var scorePlayer2 = 2;
+        
+        //Act
+        var score = Get_Score(scorePlayer1, scorePlayer2);
+        
+        //Assert
+        score.Should().Be("love-thirty");
+    }
+
     private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
         return "Player2 wins the game";
