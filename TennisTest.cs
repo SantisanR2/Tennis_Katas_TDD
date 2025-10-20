@@ -37,47 +37,30 @@ public class TennisTest
     private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
         var result = "";
-        if ((scorePlayer1 < 4 && scorePlayer2 < 4) || Math.Abs(scorePlayer2 - scorePlayer1) < 2)
-        {
-            switch (scorePlayer1)
+        if ((scorePlayer1 >= 4 || scorePlayer2 >= 4) && Math.Abs(scorePlayer2 - scorePlayer1) >= 2)
+            return ((scorePlayer1 - scorePlayer2) < 0) switch
             {
-                case 0:
-                    result += "love-";
-                    break;
-                case 1:
-                    result += "fifteen-";
-                    break;
-                case 2:
-                    result += "thirty-";
-                    break;
-                default:
-                    result += "forty-";
-                    break;
-            }
-            
-            switch (scorePlayer2)
-            {
-                case 0:
-                    result += "love";
-                    break;
-                case 1:
-                    result += "fifteen";
-                    break;
-                case 2:
-                    result += "thirty";
-                    break;
-                default:
-                    result += "forty";
-                    break;
-            }
-
-            return result;
-        }
-            
-        return ((scorePlayer1 - scorePlayer2) < 0) switch
+                true => "Player2 wins the game",
+                false => "Player1 wins the game"
+            };
+        
+        result += scorePlayer1 switch
         {
-            true => "Player2 wins the game",
-            false => "Player1 wins the game"
+            0 => "love-",
+            1 => "fifteen-",
+            2 => "thirty-",
+            _ => "forty-"
         };
+
+        result += scorePlayer2 switch
+        {
+            0 => "love",
+            1 => "fifteen",
+            2 => "thirty",
+            _ => "forty"
+        };
+
+        return result;
+
     }
 }
