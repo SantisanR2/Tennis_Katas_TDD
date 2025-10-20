@@ -19,18 +19,19 @@ public class TennisTest
         score.Should().Be(expected);
     }
 
-    [Fact]
-    public void Debe_Describir_Bien_Puntajes_De_0_A_3()
+    [Theory]
+    [InlineData(0, 2, "love-thirty")]
+    [InlineData(2, 3, "thirty-forty")]
+    [InlineData(1, 3, "fifteen-forty")]
+    public void Debe_Describir_Bien_Puntajes_De_0_A_3(int scorePlayer1, int  scorePlayer2, string expected)
     {
         //Arrange
-        var scorePlayer1 = 0;
-        var scorePlayer2 = 2;
         
         //Act
         var score = Get_Score(scorePlayer1, scorePlayer2);
         
         //Assert
-        score.Should().Be("love-thirty");
+        score.Should().Be(expected);
     }
 
     private string Get_Score(int scorePlayer1, int scorePlayer2)
