@@ -34,6 +34,20 @@ public class TennisTest
         score.Should().Be(expected);
     }
 
+    [Fact]
+    public void test()
+    {
+        //Arrange
+        var scorePlayer1 = 4;
+        var scorePlayer2 = 4;
+
+        //Act
+        var score = Get_Score(scorePlayer1, scorePlayer2);
+
+        //Assert
+        score.Should().Be("deuce");
+    }
+
     private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
         var result = "";
