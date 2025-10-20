@@ -19,7 +19,7 @@ public class TennisTest
     }
 
     [Fact]
-    public void test()
+    public void Debe_Describir_Bien_Puntajes_De_0_A_3()
     {
         //Arrange
         var scorePlayer1 = 0;
@@ -34,8 +34,6 @@ public class TennisTest
 
     private string Get_Score(int scorePlayer1, int scorePlayer2)
     {
-        if (scorePlayer2 == 2)
-            return "love-thirty";
-        return "Player2 wins the game";
+        return scorePlayer2 == 2 ? "love-thirty" : "Player2 wins the game";
     }
 }
