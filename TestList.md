@@ -1,4 +1,4 @@
 ﻿- [x] El juego lo gana quien haya hecho por lo menos 4 puntos y tenga dos más que su oponente
 - [x] Los puntajes de cero a tres puntos se describen como "love", "fifteen", "thirty" y "forty" respectivamente
 - [x] Si ambos jugadores tienen al menos tres puntos y los puntajes son iguales, se describe como "deuce"
-- [ ] Si ambos jugadores tienen al menos tres puntos y un jugador tiene solo un punto de ventaja sobre su oponente, se describe como "advantage" para el jugador con ventaja
+- [x] Si ambos jugadores tienen al menos tres puntos y un jugador tiene solo un punto de ventaja sobre su oponente, se describe como "advantage" para el jugador con ventaja

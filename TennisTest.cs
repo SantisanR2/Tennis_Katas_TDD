@@ -49,18 +49,19 @@ public class TennisTest
         score.Should().Be("deuce");
     }
 
-    [Fact]
-    public void Debe_Describir_Bien_Ventaja_Si_Ambos_3_Y_1Punto_Arriba()
+    [Theory]
+    [InlineData(4, 5, "advantage for Player2")]
+    [InlineData(6, 7, "advantage for Player2")]
+    [InlineData(9, 8, "advantage for Player1")]
+    public void Debe_Describir_Bien_Ventaja_Si_Ambos_3_Y_1Punto_Arriba(int scorePlayer1, int  scorePlayer2, string expected)
     {
         //Arrange
-        var scorePlayer1 = 4;
-        var scorePlayer2 = 5;
         
         //Act
         var score = Get_Score(scorePlayer1, scorePlayer2);
         
         //Assert
-        score.Should().Be("advantage for Player2");
+        score.Should().Be(expected);
     }
 
     private string Get_Score(int scorePlayer1, int scorePlayer2)
