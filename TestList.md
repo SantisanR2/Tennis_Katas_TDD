@@ -2,3 +2,4 @@
 - [x] Los puntajes de cero a tres puntos se describen como "love", "fifteen", "thirty" y "forty" respectivamente
 - [x] Si ambos jugadores tienen al menos tres puntos y los puntajes son iguales, se describe como "deuce"
 - [x] Si ambos jugadores tienen al menos tres puntos y un jugador tiene solo un punto de ventaja sobre su oponente, se describe como "advantage" para el jugador con ventaja
+- [x] Si hay un empate y los jugadores tienen menos de 3 puntos, solo se dice el primer puntaje y "-all"
